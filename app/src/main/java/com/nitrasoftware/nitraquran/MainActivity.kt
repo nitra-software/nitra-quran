@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -26,8 +26,8 @@ interfaz()
 @Composable
 fun interfaz() {
 val uriHandler = LocalUriHandler.current
-Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceEvenly) {
-Text(text = "مرحبا بكم في quran audio. Bienvenue dans quran audio. Bienvenido a quran audio")
+Column() {
+Text(text = "مرحبا بكم في Nitra Quran. Bienvenue dans Nitra Quran. Bienvenido a Nitra Quran.")
 Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=pK0oKsQRR2w") }) {Text(text = "1. الفاتحة")}
 Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=h2msf6ZumvQ") }) {Text(text = "2. البقرة")}
 }
