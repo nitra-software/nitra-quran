@@ -26,13 +26,9 @@ interfaz()
 @Composable
 fun interfaz() {
 val uriHandler = LocalUriHandler.current
-Row(
-verticalAlignment = Alignment.CenterVertically,
-horizontalArrangement = Arrangement.SpaceEvenly
-) {
+Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceEvenly) {
 Text(text = "مرحبا بكم في quran audio. Bienvenue dans quran audio. Bienvenido a quran audio")
-Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=pK0oKsQRR2w") }) {
-Text(text = "1. سورة الفاتحة")
-}
+Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=pK0oKsQRR2w") }) {Text(text = "1. الفاتحة")}
+Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=h2msf6ZumvQ") }) {Text(text = "2. البقرة")}
 }
 }
