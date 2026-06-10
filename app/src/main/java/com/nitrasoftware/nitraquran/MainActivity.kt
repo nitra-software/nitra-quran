@@ -26,9 +26,17 @@ interfaz()
 @Composable
 fun interfaz() {
 val uriHandler = LocalUriHandler.current
-Column() {
-Text(text = "مرحبا بكم في Nitra Quran. Bienvenue dans Nitra Quran. Bienvenido a Nitra Quran.")
-Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=pK0oKsQRR2w") }) {Text(text = "1. الفاتحة")}
-Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=h2msf6ZumvQ") }) {Text(text = "2. البقرة")}
+LazyColumn() {
+item {Text(text = "مرحبا بكم في Nitra Quran. Bienvenue dans Nitra Quran. Bienvenido a Nitra Quran.")}
+item {Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=pK0oKsQRR2w") }) {Text(text = "1. الفاتحة")}}
+item {Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=h2msf6ZumvQ") }) {Text(text = "2. البقرة")}}
+item {Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=gps_SaN1jc8") }) {Text(text = "3. ال عمران")}}
+item {Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=gqrQGC2YEU8") }) {Text(text = "4. النساء")}}
+item {Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=Qg26JvyKJaA") }) {Text(text = "5. المائدة")}}
+item {Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=8ruPQQsG0Vk") }) {Text(text = "6. الأنعام")}}
+item {Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=44nG3QEahPc") }) {Text(text = "7. الأعراف")}}
+item {Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=lzRuS6DeWuk") }) {Text(text = "8. الأنفال")}}
+item {Button(onClick = { uriHandler.openUri("https://www.youtube.com/watch?v=0rrWG3RQkNM") }) {Text(text = "10. يونس")}}
+
 }
 }
